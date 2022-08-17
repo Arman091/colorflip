@@ -6,7 +6,8 @@ const thecolor = document.querySelector('.thecolor');
 btn.addEventListener('click', function(){
  let colorhex="#";
  for(i=0;i<6;i++){
-     var rando = hex[getRandom()];                colorhex += rando;
+     var rando = hex[Math.floor((Math.random() * hex.length))];
+     colorhex += rando;
      
  }
   document.body.style.backgroundColor = colorhex;
@@ -14,6 +15,3 @@ btn.addEventListener('click', function(){
                               
 })
 
-function getRandom() {
-    var rand = Math.floor(Math.random()*hex.length);   return rand;                    
-}
